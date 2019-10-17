@@ -1,0 +1,18 @@
+{
+  "name": "json-rpc-server",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-json-rpc-router": "^0.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.2"
+  }
+}
