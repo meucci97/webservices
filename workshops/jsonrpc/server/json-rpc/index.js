@@ -3,7 +3,6 @@ const jsonRouter = require('express-json-rpc-router')
 const cors = require('cors');
 const app = express();
 
-app.use(logger('dev'));
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extended: true }));
