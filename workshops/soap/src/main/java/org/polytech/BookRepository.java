@@ -4,7 +4,9 @@ import io.spring.guides.gs_producing_web_service.Book;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
+import java.util.Collection;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Component
@@ -38,4 +40,6 @@ public class BookRepository {
     public Book findBook(int id) {
         return books.get(id);
     }
+
+    public Collection<Book> getAllBooks(){return books.values();}
 }

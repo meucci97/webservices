@@ -45,8 +45,32 @@ type Args struct {
 
 type House int
 
+func (t *House) GetHouse(args *Args, reply *HouseDAO) error {
+	*reply = houses[args.Id]
+	return nil
+}
+
 func main() {
 	/**
-    TO DO
-    **/
+	    TO DO
+		**/
+	house := new(House)
+	err := rpc.Register(house)
+
+	if err != nil {
+		log.Fatalf("ERROR --> %s", err)
+	}
+
+	rpc.HandleHTTP()
+
+	l, e := net.Listen("tcp", ":1234")
+
+	if e != nil {
+		log.Fatalf("Couldn't start listening on port 1234. Error %s", e)
+	}
+
+	err = http.Serve(l, nil)
+	if err != nil {
+		log.Fatalf("Error serving: %s", err)
+	}
 }
