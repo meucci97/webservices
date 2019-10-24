@@ -41,6 +41,24 @@ const controller = {
   }
 }
 
+// Get House request 
+// {
+//   "jsonrpc": "2.0",
+//    "method": "house.GetHouse",
+//    "params": {
+//      "Id": 2
+//    },
+//    "id": "1"
+//  }
+// {
+//   "jsonrpc": "2.0",
+//    "method": "house.GetHouses",
+//    "params": {
+//      "Id": 2
+//    },
+//    "id": "1"
+//  }
+
 // ROUTER
 app.use(jsonRouter({ methods: controller }))
 app.listen(1234, () => console.log('Example app listening on port 1234'))
